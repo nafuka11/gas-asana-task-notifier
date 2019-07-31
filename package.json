@@ -5,8 +5,9 @@
   "main": "src/main.ts",
   "scripts": {
     "login": "clasp login",
-    "create": "clasp create --rootDir ./src",
-    "push": "clasp push"
+    "create": "clasp create --type standalone --rootDir ./src",
+    "push": "clasp push -f",
+    "open": "clasp open"
   },
   "keywords": [],
   "author": "nafuka11",
