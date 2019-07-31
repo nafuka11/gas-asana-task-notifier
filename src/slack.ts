@@ -8,6 +8,9 @@ import { AsanaTask } from "./asana";
  * @param {string} slackUrl Slack Incoming Webhook URL
  */
 export function postMessage(tasks: AsanaTask[], slackUrl: string) {
+  if (tasks.length <= 0) {
+    return;
+  }
   const blocks: AsanaTask[] = createMessageBlocks(tasks);
   const options: GoogleAppsScript.URL_Fetch.URLFetchRequestOptions = {
     method: "post",
