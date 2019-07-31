@@ -1,0 +1,26 @@
+{
+  "name": "gas-asana-task-notifier",
+  "version": "0.1.0",
+  "description": "post Asana's completed tasks to slack",
+  "main": "src/main.ts",
+  "scripts": {
+    "login": "clasp login",
+    "create": "clasp create --rootDir ./src",
+    "push": "clasp push"
+  },
+  "keywords": [],
+  "author": "nafuka11",
+  "license": "MIT",
+  "dependencies": {
+    "@google/clasp": "^2.2.1",
+    "@types/google-apps-script": "0.0.54"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "prettier": "^1.18.2"
+  }
+}
