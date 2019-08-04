@@ -1,5 +1,4 @@
 const ENDPOINT_URL = "https://app.asana.com/api/1.0/tasks";
-const MAX_TASKS = 20;
 
 export interface AsanaTask {
   name: string;
@@ -44,5 +43,5 @@ export function fetchCompletedTasks(
       name: value.name,
       completedAt: new Date(value.completed_at)
     }));
-  return tasks.splice(tasks.length - MAX_TASKS, tasks.length);
+  return tasks;
 }

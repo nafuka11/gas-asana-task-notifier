@@ -1,5 +1,7 @@
 import { AsanaTask } from "./asana";
 
+const MAX_TASKS = 20;
+
 /**
  * Slackにtaskを投稿する
  *
@@ -29,19 +31,25 @@ export function postMessage(tasks: AsanaTask[], slackUrl: string) {
  */
 function createMessageBlocks(tasks: AsanaTask[]): any[] {
   const blocks = [];
+  let headerText = `You completed *${tasks.length}* task${
+    tasks.length > 1 ? "s" : ""
+  }! Congratulations!`;
+  if (tasks.length > MAX_TASKS) {
+    headerText += ` (Showing latest ${MAX_TASKS} tasks)`;
+  }
   // header
   blocks.push({
     type: "section",
     text: {
       type: "mrkdwn",
-      text: `You completed *${tasks.length}* tasks! Congratulations!`
+      text: headerText
     }
   });
   blocks.push({
     type: "divider"
   });
   // tasks
-  tasks.forEach(task => {
+  tasks.splice(tasks.length - MAX_TASKS, tasks.length).forEach(task => {
     blocks.push({
       type: "section",
       text: {
