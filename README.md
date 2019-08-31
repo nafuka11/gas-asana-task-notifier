@@ -1,5 +1,7 @@
 # gas-asana-task-notifier
 
+![Slack投稿サンプル](https://user-images.githubusercontent.com/42476527/64058923-3ea1f580-cbed-11e9-8dd7-80387e2d9669.png)
+
 Asanaの特定プロジェクトにある完了済みタスクを、Slackに投稿するGoogle App Scriptです。
 
 完了タスクが多い場合、最新20件を取得します。
