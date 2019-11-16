@@ -49,7 +49,8 @@ function createMessageBlocks(tasks: AsanaTask[]): any[] {
     type: "divider"
   });
   // tasks
-  tasks.splice(tasks.length - MAX_TASKS, tasks.length).forEach(task => {
+  const startIndex = Math.max(0, tasks.length - MAX_TASKS);
+  tasks.slice(startIndex).forEach(task => {
     blocks.push({
       type: "section",
       text: {
