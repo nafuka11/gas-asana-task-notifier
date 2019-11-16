@@ -6,11 +6,15 @@ module.exports = {
         "prettier/@typescript-eslint"
     ],
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "googleappsscript",
+        "jest",
     ],
     "parser": "@typescript-eslint/parser",
     "env": {
-        "es6": true
+      "node": true,
+      "googleappsscript/googleappsscript": true,
+      "jest/globals": true,
     },
     "parserOptions": {
         "sourceType": "module"
