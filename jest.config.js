@@ -1,5 +1,5 @@
 module.exports = {
-  "globals": {
+  globals: {
     "UrlFetchApp": {},
     "Logger": {},
     "Utilities": {}
@@ -18,5 +18,5 @@ module.exports = {
   transform: {
     "^.+\\.tsx?$": "ts-jest",
   },
-  "verbose": true,
+  verbose: true,
 };
