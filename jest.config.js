@@ -1,7 +1,8 @@
 module.exports = {
   "globals": {
     "UrlFetchApp": {},
-    "Logger": {}
+    "Logger": {},
+    "Utilities": {}
   },
   moduleDirectories: [
     "node_modules"
