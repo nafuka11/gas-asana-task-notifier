@@ -14,10 +14,10 @@
   "author": "nafuka11",
   "license": "MIT",
   "dependencies": {
-    "@google/clasp": "^2.2.1",
-    "@types/google-apps-script": "0.0.54"
+    "@google/clasp": "^2.4.1"
   },
   "devDependencies": {
+    "@types/google-apps-script": "^1.0.37",
     "@types/jest": "^24.0.18",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
